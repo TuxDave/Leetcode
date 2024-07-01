@@ -15,8 +15,7 @@ fun List<Int>.abs(i: Int, j: Int): Int {
     return abs(this[i] - this[j])
 }
 
-//TODO: con 100000 numeri non ce la fa
-fun minAbsoluteDifference(nums: List<Int>, x: Int): Int {
+fun minAbsoluteDifference_tailrec(nums: List<Int>, x: Int): Int { //not working with many numbers, n^2
     tailrec fun helper(nums: List<Int>, min: Int, offset: Int = 0): Int {
         if(nums.size > x) {
             tailrec fun abser(nums: List<Int>, i: Int, min: Int): Int { //min, offset
