@@ -8,7 +8,7 @@ fun main() {
     f.forEachLine {
         l.add(Integer.valueOf(it))
     }
-    println(minAbsoluteDifference(l, 79811))
+    println(minAbsoluteDifference_tailrec(l, 79811))
 }
 
 fun List<Int>.abs(i: Int, j: Int): Int {
